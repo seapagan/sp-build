@@ -1,6 +1,7 @@
 const path = require("path");
 
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -21,14 +22,15 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: "src/index.html",
       }),
+      new ESLintPlugin(),
     ].concat(
       devMode
         ? []
         : [
-            new MiniCssExtractPlugin({
-              filename: "site.[contenthash].css",
-            }),
-          ]
+          new MiniCssExtractPlugin({
+            filename: "site.[contenthash].css",
+          }),
+        ]
     ),
     devServer: {
       client: {
