@@ -85,6 +85,7 @@ standard web server or GH-Pages / Netlify etc.
 - JS and CSS are compressed and postfixed with a Hash for each code change. The
   HTML file is automatically updated with these.
 - ESLint(JS) and StyleLint(CSS) are run automatically.
+- SCSS and SASS automatically detected and compiled on the fly.
 
 ## Planned functionality
 
@@ -92,5 +93,5 @@ standard web server or GH-Pages / Netlify etc.
   as part of the webpack process, this is planned and will fail or warn the
   build if errors.
 - Add Typescript
-- Add SCSS/SASS/PostCSS integration
+- Add PostCSS integration
 - Add favicon automatically if exists
