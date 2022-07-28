@@ -84,10 +84,11 @@ standard web server or GH-Pages / Netlify etc.
 - Babel for Javascript files to transpile to backwards-compatible code.
 - JS and CSS are compressed and postfixed with a Hash for each code change. The
   HTML file is automatically updated with these.
+- ESLint(JS) and StyleLint(CSS) are run automatically.
 
 ## Planned functionality
 
-- ESLint and html-validate are included for editor integration, but not yet run
+- html-validate is included for editor integration, but not yet run
   as part of the webpack process, this is planned and will fail or warn the
   build if errors.
 - Add Typescript
