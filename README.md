@@ -7,6 +7,7 @@ minimized code for production.
 - [How to get](#how-to-get)
 - [How to use](#how-to-use)
   - [Development](#development)
+  - [CSS files](#css-files)
   - [Typescript](#typescript)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
@@ -60,6 +61,19 @@ Remove the current placeholder HTML/CSS/JS and start coding!!
 
 > Running `npm run build` or `yarn build` will create an un-minified version of
 > the produced code for info and checking.
+
+### CSS files
+
+your CSS files need to be imported in the JS file instead of the HTML. In a
+production bundle, these will be combined and extracted then minified. Import
+them at the top of your JS file, for example:
+
+```javascript
+import "./styles/site.css";
+```
+
+You can also use `SASS` or `SCSS` instead of plain CSS, simply by renaming the
+file extensions
 
 ### Typescript
 
