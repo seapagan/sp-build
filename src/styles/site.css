@@ -7,6 +7,10 @@
 }
 
 /* ----------- DELETE BELOW THIS and replace with your own styles ----------- */
+body {
+  font-family: Roboto, sans-serif;
+}
+
 h1 {
   text-align: center;
   margin: 1em;
@@ -18,6 +22,7 @@ h1 {
 }
 
 .horrible-red {
+  text-align: center;
   padding: 2em;
   margin: 1em;
   background-color: red;
@@ -25,4 +30,8 @@ h1 {
   font-size: 2em;
   border-radius: 1em;
   box-shadow: 0 10px 13px -7px #000;
+}
+
+.no-js {
+  text-align: center;
 }
