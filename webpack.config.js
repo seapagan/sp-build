@@ -12,13 +12,14 @@ module.exports = (env, argv) => {
 
   const config = {
     mode: argv.mode ? argv.mode : "development",
-    entry: "./src/index.js",
+    entry: {
+      bundle: "./src/index.js"
+    },
+    devtool: "inline-source-map",
     output: {
       path: __dirname + "/dist",
-      filename: "site.[contenthash].js",
-      clean: {
-        keep: /favicon/,
-      },
+      filename: "[contenthash].js",
+      clean: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -33,7 +34,7 @@ module.exports = (env, argv) => {
         ? []
         : [
           new MiniCssExtractPlugin({
-            filename: "site.[contenthash].css",
+            filename: "[contenthash].css",
           }),
         ]
     ),
@@ -60,6 +61,7 @@ module.exports = (env, argv) => {
         {
           test: /\.js$/,
           exclude: /node_modules/,
+          include: path.resolve(__dirname, "src"),
           use: {
             loader: "babel-loader",
             options: {
