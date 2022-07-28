@@ -1,4 +1,5 @@
 const path = require("path");
+const fs=require("fs");
 
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
@@ -7,15 +8,27 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 
 
+const chooseEntry = (src_dir) => {
+  // this will use an index.ts file if exists, otherwise uses index.js
+  // if both, the .ts is preferred
+  const indexTs = path.join(__dirname,src_dir, "index.ts");
+  const indexJs = path.join(__dirname, src_dir, "index.js");
+  return fs.existsSync(indexTs) ? indexTs : indexJs;
+};
+
+
 module.exports = (env, argv) => {
   const devMode = argv.mode !== "production";
 
   const config = {
     mode: argv.mode ? argv.mode : "development",
     entry: {
-      bundle: "./src/index.js"
+      bundle: chooseEntry("src")
     },
     devtool: "inline-source-map",
+    resolve: {
+      extensions: [".tsx", ".ts", ".js"],
+    },
     output: {
       path: __dirname + "/dist",
       filename: "[contenthash].js",
@@ -69,6 +82,13 @@ module.exports = (env, argv) => {
             },
           },
         },
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "ts-loader",
+          },
+        }
       ],
     },
     optimization: {
