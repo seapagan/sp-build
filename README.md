@@ -56,6 +56,8 @@ This creates a development server running on the default port of `8080` which
 you can then open in a browser at <http://localhost:8080>. This will
 automatically update when you make any changes to the HTML, CSS or JS files.
 
+Remove the current placeholder HTML/CSS/JS and start coding!!
+
 > Running `npm run build` or `yarn build` will create an un-minified version of
 > the produced code for info and checking.
 

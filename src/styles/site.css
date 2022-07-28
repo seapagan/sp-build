@@ -9,6 +9,8 @@
 /* ----------- DELETE BELOW THIS and replace with your own styles ----------- */
 body {
   font-family: Roboto, sans-serif;
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -21,11 +23,11 @@ h1 {
   padding: 0.5em;
 }
 
-.horrible-red {
+.big-box {
   text-align: center;
   padding: 2em;
   margin: 1em;
-  background-color: red;
+  background-color: hsl(203, 100%, 50%);
   color: white;
   font-size: 2em;
   border-radius: 1em;
@@ -34,4 +36,26 @@ h1 {
 
 .no-js {
   text-align: center;
+  color: red;
+  font-weight: 700;
+}
+
+footer {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer a {
+  color: hsl(37, 100%, 50%);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    width: 95%;
+  }
+
+  .big-box {
+    font-size: 1.5em;
+  }
 }
