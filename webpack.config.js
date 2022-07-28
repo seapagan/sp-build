@@ -4,6 +4,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
+
 
 module.exports = (env, argv) => {
   const devMode = argv.mode !== "production";
@@ -23,6 +25,9 @@ module.exports = (env, argv) => {
         template: "src/index.html",
       }),
       new ESLintPlugin(),
+      new StylelintPlugin({
+        configFile: ".stylelintrc.json"
+      })
     ].concat(
       devMode
         ? []
