@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "html-validate:recommended",
+    "html-validate:document"
+  ],
+  "rules": {
+    "void-style": [
+      "error",
+      {
+        "style": "selfclosing"
+      }
+    ],
+    "require-sri": [
+      "error",
+      {
+        "target": "crossorigin",
+        "exclude": [
+          "googleapis.com",
+          "gstatic.com"
+        ]
+      }
+    ],
+    "no-style-tag": "error"
+  }
+}
