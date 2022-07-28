@@ -1,7 +1,8 @@
 {
   "css.customData": ["./.vscode/custom.css-data.json"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "editor.folding": true,
   "editor.formatOnPaste": true,
