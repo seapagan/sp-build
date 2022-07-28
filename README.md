@@ -7,6 +7,7 @@ minimized code for production.
 - [How to get](#how-to-get)
 - [How to use](#how-to-use)
   - [Development](#development)
+  - [Typescript](#typescript)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
 - [Planned functionality](#planned-functionality)
@@ -58,6 +59,12 @@ automatically update when you make any changes to the HTML, CSS or JS files.
 > Running `npm run build` or `yarn build` will create an un-minified version of
 > the produced code for info and checking.
 
+### Typescript
+
+By default the build system uses plain JavaScript. if you prefer to use
+TypeScript, simply rename the `index.js` to `index.ts` and code as normal.
+TypeScript and supporting libraries are already installed.
+
 ### Production
 
 Once your code is ready to go live, you can create an optimized and minimized
@@ -86,12 +93,12 @@ standard web server or GH-Pages / Netlify etc.
   HTML file is automatically updated with these.
 - ESLint(JS) and StyleLint(CSS) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
+- Typescript is integrated. You can use either TS or JS as required.
 
 ## Planned functionality
 
 - html-validate is included for editor integration, but not yet run
   as part of the webpack process, this is planned and will fail or warn the
   build if errors.
-- Add Typescript
 - Add PostCSS integration
 - Add favicon automatically if exists
