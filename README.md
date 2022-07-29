@@ -2,16 +2,19 @@
 
 This is a setup for plain HTML/CSS/JS coding, when using a Library or Framework
 is too much. It gives a real-time update in development mode and optimized,
-minimized code for production.
+minimized code for production. JS/TS, CSS/SCSS/SASS ready.
 
 - [How to get](#how-to-get)
 - [How to use](#how-to-use)
   - [Development](#development)
-  - [CSS files](#css-files)
-  - [Typescript](#typescript)
+  - [Specific Notes](#specific-notes)
+    - [Stylesheet files](#stylesheet-files)
+    - [Typescript](#typescript)
+    - [Favicon](#favicon)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
 - [Planned functionality](#planned-functionality)
+- [Bugs](#bugs)
 
 Currently a work in progress, I still have several additions. Works fine for
 HTML/CSS/JS projects though.
@@ -62,7 +65,11 @@ Remove the current placeholder HTML/CSS/JS and start coding!!
 > Running `npm run build` or `yarn build` will create an un-minified version of
 > the produced code for info and checking.
 
-### CSS files
+### Specific Notes
+
+The following notes are of interest.
+
+#### Stylesheet files
 
 your CSS files need to be imported in the JS file instead of the HTML. In a
 production bundle, these will be combined and extracted then minified. Import
@@ -75,11 +82,18 @@ import "./styles/site.css";
 You can also use `SASS` or `SCSS` instead of plain CSS, simply by renaming the
 file extensions
 
-### Typescript
+#### Typescript
 
 By default the build system uses plain JavaScript. if you prefer to use
-TypeScript, simply rename the `index.js` to `index.ts` and code as normal.
+TypeScript, simply rename the `index.js` to `index.ts`, stop and restart the dev
+server then code as normal.
 TypeScript and supporting libraries are already installed.
+
+#### Favicon
+
+If you put a `favicon.ico` file in the [src](src) directory, it will
+automatically be added to the `dist` folder and the HTML. You will need to stop
+and restart the dev server after adding the favicon, if it is running.
 
 ### Production
 
@@ -110,6 +124,7 @@ standard web server or GH-Pages / Netlify etc.
 - ESLint(JS) and StyleLint(CSS) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
+- Adds favicon automatically if exists in the `src` folder.
 
 ## Planned functionality
 
@@ -117,4 +132,8 @@ standard web server or GH-Pages / Netlify etc.
   as part of the webpack process, this is planned and will fail or warn the
   build if errors.
 - Add PostCSS integration
-- Add favicon automatically if exists
+
+## Bugs
+
+- ESLint does not understand Typescript in (at least) VSCode and gives errors.
+  This does not stop compilation though.

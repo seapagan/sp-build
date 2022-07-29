@@ -8,7 +8,7 @@
 
 /* ----------- DELETE BELOW THIS and replace with your own styles ----------- */
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Oxygen, sans-serif;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -16,11 +16,14 @@ body {
 h1 {
   text-align: center;
   margin: 1em;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .check {
   text-align: center;
   padding: 0.5em;
+  line-height: 1.5em;
 }
 
 .big-box {
@@ -30,6 +33,7 @@ h1 {
   background-color: hsl(203, 100%, 50%);
   color: white;
   font-size: 2em;
+  line-height: 1.5em;
   border-radius: 1em;
   box-shadow: 0 10px 13px -7px #000;
 }

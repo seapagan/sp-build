@@ -8,14 +8,19 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 
 
-const chooseEntry = (src_dir) => {
+const chooseEntry = () => {
   // this will use an index.ts file if exists, otherwise uses index.js
   // if both, the .ts is preferred
-  const indexTs = path.join(__dirname,src_dir, "index.ts");
-  const indexJs = path.join(__dirname, src_dir, "index.js");
+  const indexTs = path.join(__dirname, "src/index.ts");
+  const indexJs = path.join(__dirname, "src/index.js");
   return fs.existsSync(indexTs) ? indexTs : indexJs;
 };
 
+const haveFavicon = () => {
+  // if there is a favicon.ico file, use it
+  const favicon = path.join(__dirname, "src/favicon.ico");
+  return fs.existsSync(favicon);
+};
 
 module.exports = (env, argv) => {
   const devMode = argv.mode !== "production";
@@ -37,6 +42,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "src/index.html",
+        favicon: haveFavicon() ? "src/favicon.ico" : "",
       }),
       new ESLintPlugin(),
       new StylelintPlugin({
