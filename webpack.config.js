@@ -1,3 +1,9 @@
+/* -------------------------------------------------------------------------- */
+/* ------------------- SPBuild Sytem Verison 1.0.0.beta.2 ------------------- */
+/* --------------- (C) Grant Ramsay 2022 under the MIT Licence -------------- */
+/* ------------------ https://github.com/seapagan/sp-build ------------------ */
+/* -------------------------------------------------------------------------- */
+
 const path = require("path");
 const fs=require("fs");
 
@@ -7,10 +13,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 
-
 const chooseEntry = () => {
   // this will use an index.ts file if exists, otherwise uses index.js
-  // if both, the .ts is preferred
+  // if both exist, the .ts is preferred
   const indexTs = path.join(__dirname, "src/index.ts");
   const indexJs = path.join(__dirname, "src/index.js");
   return fs.existsSync(indexTs) ? indexTs : indexJs;
