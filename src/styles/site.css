@@ -9,7 +9,7 @@
 /* ----------- DELETE BELOW THIS and replace with your own styles ----------- */
 body {
   font-family: Roboto, sans-serif;
-  width: 80%;
+  max-width: 700px;
   margin: 0 auto;
 }
 
