@@ -30,7 +30,7 @@ module.exports = (env, argv) => {
     entry: {
       bundle: chooseEntry("src")
     },
-    devtool: "inline-source-map",
+    devtool: devMode ? "eval" : "source-map",
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
     },
