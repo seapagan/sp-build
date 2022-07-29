@@ -1,4 +1,4 @@
-# Skeleton Webpack setup for simple development <!-- omit in toc -->
+# SPBuild - Webpack build system for simple development <!-- omit in toc -->
 
 This is a setup for plain HTML/CSS/JS coding, when using a Library or Framework
 is too much. It gives a real-time update in development mode and optimized,
@@ -24,15 +24,15 @@ HTML/CSS/JS projects though.
 
 - Clone the repo from GitHub. Remember to remove the `.git` directory inside and
 reinitialize with `git --init`.
-- Download the latest public release [here](https://github.com/seapagan/webpack-skel/releases/latest)
+- Download the latest public release [here](https://github.com/seapagan/sp-build/releases/latest)
 - Download the latest tarball from the main branch
-  [here](https://github.com/seapagan/webpack-skel/archive/main.tar.gz). This may
+  [here](https://github.com/seapagan/sp-build/archive/main.tar.gz). This may
   contain breaking code.
 - Use [Degit](https://github.com/Rich-Harris/degit) to get a clean clone of the
   repo you can use straight away:
 
   ```bash
-  npx degit https://github.com/seapagan/webpack-skel <folder to put it>
+  npx degit https://github.com/seapagan/sp-build <folder to put it>
   ```
 
 The last 3 options do not contain the `.git` directory so you can then go ahead
