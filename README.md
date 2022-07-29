@@ -130,13 +130,13 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - Development server that hot-reloads on all code changes
 - Create a standalone production build that can run in a browser.
 - Babel for Javascript files to transpile to backwards-compatible code.
-- JS and CSS are compressed and postfixed with a Hash for each code change. The
+- JS and CSS are compressed and named with a Hash for each code change. The
   HTML file is automatically updated with these.
 - ESLint(JS) and StyleLint(CSS) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
 - Adds favicon automatically if exists in the `src` folder.
-- Separate Sourcemap files are generated for Procuction.
+- Separate Sourcemap files are generated for Production.
 
 ## Planned functionality
 
