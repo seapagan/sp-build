@@ -26,7 +26,7 @@ HTML/CSS/JS projects though.
 reinitialize with `git --init`.
 - Download the latest public release [here](https://github.com/seapagan/webpack-skel/releases/latest)
 - Download the latest tarball from the main branch
-  [here](https://github.com/seapagan/webpack-skel/tarballs/main). This may
+  [here](https://github.com/seapagan/webpack-skel/archive/main.tar.gz). This may
   contain breaking code.
 - Use [Degit](https://github.com/Rich-Harris/degit) to get a clean clone of the
   repo you can use straight away:
