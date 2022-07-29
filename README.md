@@ -11,6 +11,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
     - [Stylesheet files](#stylesheet-files)
     - [Typescript](#typescript)
     - [Favicon](#favicon)
+    - [Source Maps](#source-maps)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
 - [Planned functionality](#planned-functionality)
@@ -95,6 +96,16 @@ If you put a `favicon.ico` file in the [src](src) directory, it will
 automatically be added to the `dist` folder and the HTML. You will need to stop
 and restart the dev server after adding the favicon, if it is running.
 
+#### Source Maps
+
+By default we generate inline source maps for Development mode and high-quality
+external source map files for Production. These `*.map` files can be deleted if
+you want, but will only be loaded if the Browser Dev Tools are open so won't
+cause any slowdown in Production. They are very useful for error reports from
+live sites, and the lack of them does not really make your code more secure.
+**If you are storing secrets or API keys in front-end JavaScript then they are
+insecure regardless!!**
+
 ### Production
 
 Once your code is ready to go live, you can create an optimized and minimized
@@ -111,8 +122,8 @@ yarn prod
 ```
 
 This (if you have no errors) will create / overwrite the `dist` directory with
-your new index.html and minimized CSS, JS. This folder can be served from any
-standard web server or GH-Pages / Netlify etc.
+your new index.html and minimized CSS, JS plus the respective `.map` files. This
+folder can be served from any standard web server or GH-Pages / Netlify etc.
 
 ## Implemented functionality
 
@@ -125,6 +136,7 @@ standard web server or GH-Pages / Netlify etc.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
 - Adds favicon automatically if exists in the `src` folder.
+- Separate Sourcemap files are generated for Procuction.
 
 ## Planned functionality
 
