@@ -144,6 +144,8 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
   as part of the webpack process, this is planned and will fail or warn the
   build if errors.
 - Add PostCSS integration
+- Integrate `favicons-webpack-plugin` to auto generate favicons for different
+  devices
 
 ## Bugs
 
