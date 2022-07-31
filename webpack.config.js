@@ -65,6 +65,10 @@ module.exports = (env, argv) => {
     devServer: {
       client: {
         logging: "warn",
+        overlay: {
+          warnings: false,
+          errors: true
+        }
       },
       static: {
         directory: path.join(__dirname, "dist"),
