@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
   const config = {
     mode: argv.mode ? argv.mode : "development",
     entry: {
-      bundle: chooseEntry("src")
+      bundle: chooseEntry()
     },
     devtool: devMode ? "eval" : "source-map",
     resolve: {
