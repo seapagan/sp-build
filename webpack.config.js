@@ -5,10 +5,11 @@
 /* -------------------------------------------------------------------------- */
 
 const path = require("path");
-const fs=require("fs");
+const fs = require("fs");
 
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const HtmlValidatePlugin = require("html-validate-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
@@ -52,7 +53,8 @@ module.exports = (env, argv) => {
       new ESLintPlugin(),
       new StylelintPlugin({
         configFile: ".stylelintrc.json"
-      })
+      }),
+      new HtmlValidatePlugin()
     ].concat(
       devMode
         ? []
