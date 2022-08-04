@@ -12,6 +12,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
     - [Typescript](#typescript)
     - [Favicon](#favicon)
     - [Source Maps](#source-maps)
+    - [HTML Validation](#html-validation)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
 - [Planned functionality](#planned-functionality)
@@ -106,6 +107,15 @@ live sites, and the lack of them does not really make your code more secure.
 **If you are storing secrets or API keys in front-end JavaScript then they are
 insecure regardless!!**
 
+#### HTML Validation
+
+This is run automantically on HTML files, and will fail the build or dev-server
+if there are any errors. However, due to constraints with the plugin used, this
+needs html-validate installed globally to work, even though it's part of the
+build system development dependencies.
+
+`npm i -g html-validate` or `yarn add html-validate -D`
+
 ### Production
 
 Once your code is ready to go live, you can create an optimized and minimized
@@ -132,7 +142,7 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - Babel for Javascript files to transpile to backwards-compatible code.
 - JS and CSS are compressed and named with a Hash for each code change. The
   HTML file is automatically updated with these.
-- ESLint(JS) and StyleLint(CSS) are run automatically.
+- ESLint(JS), StyleLint(CSS) and HTML-Validate (HTML) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
 - Adds favicon automatically if exists in the `src` folder.
@@ -140,9 +150,6 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 
 ## Planned functionality
 
-- html-validate is included for editor integration, but not yet run
-  as part of the webpack process, this is planned and will fail or warn the
-  build if errors.
 - Add PostCSS integration
 - Integrate `favicons-webpack-plugin` to auto generate favicons for different
   devices
