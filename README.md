@@ -12,7 +12,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
     - [Typescript](#typescript)
     - [Favicon](#favicon)
     - [Source Maps](#source-maps)
-    - [HTML Validation](#html-validation)
+    - [Validation](#validation)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
 - [Planned functionality](#planned-functionality)
@@ -107,14 +107,11 @@ live sites, and the lack of them does not really make your code more secure.
 **If you are storing secrets or API keys in front-end JavaScript then they are
 insecure regardless!!**
 
-#### HTML Validation
+#### Validation
 
-This is run automantically on HTML files, and will fail the build or dev-server
-if there are any errors. However, due to constraints with the plugin used, this
-needs html-validate installed globally to work, even though it's part of the
-build system development dependencies.
-
-`npm i -g html-validate` or `yarn add html-validate -D`
+This is run automatically on HTML files (using `html-validate`), JavaScript
+files (using `ESLint`) and CSS/SCSS/SASS files using `StyleLint`, **The build
+process or dev-server will fail if there are any validation errors!**.
 
 ### Production
 
