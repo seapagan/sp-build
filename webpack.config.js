@@ -13,6 +13,7 @@ const HtmlValidatePlugin = require("html-validate-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
+const WarningsToErrorsPlugin = require("warnings-to-errors-webpack-plugin");
 
 const chooseEntry = () => {
   // this will use an index.ts file if exists, otherwise uses index.js
@@ -59,10 +60,11 @@ module.exports = (env, argv) => {
       devMode
         ? []
         : [
-          new MiniCssExtractPlugin({
-            filename: "[contenthash].css",
-          }),
-        ]
+            new WarningsToErrorsPlugin(),
+            new MiniCssExtractPlugin({
+              filename: "[contenthash].css",
+            }),
+          ]
     ),
     devServer: {
       client: {
