@@ -108,6 +108,11 @@ module.exports = (env, argv) => {
             loader: "ts-loader",
           },
         },
+        {
+          // inline small svg files
+          test: /\.svg$/,
+          type: "asset",
+        },
       ],
     },
     optimization: {
