@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
   const config = {
     mode: argv.mode ? argv.mode : "development",
     entry: {
-      bundle: chooseEntry()
+      bundle: chooseEntry(),
     },
     devtool: devMode ? "eval" : "source-map",
     resolve: {
@@ -53,9 +53,9 @@ module.exports = (env, argv) => {
       }),
       new ESLintPlugin(),
       new StylelintPlugin({
-        configFile: ".stylelintrc.json"
+        configFile: ".stylelintrc.json",
       }),
-      new HtmlValidatePlugin()
+      new HtmlValidatePlugin(),
     ].concat(
       devMode
         ? []
@@ -71,8 +71,8 @@ module.exports = (env, argv) => {
         logging: "warn",
         overlay: {
           warnings: false,
-          errors: true
-        }
+          errors: true,
+        },
       },
       static: {
         directory: path.join(__dirname, "dist"),
@@ -87,7 +87,7 @@ module.exports = (env, argv) => {
           use: [
             devMode ? "style-loader" : MiniCssExtractPlugin.loader,
             "css-loader",
-            "sass-loader"
+            "sass-loader",
           ],
         },
         {
@@ -107,7 +107,7 @@ module.exports = (env, argv) => {
           use: {
             loader: "ts-loader",
           },
-        }
+        },
       ],
     },
     optimization: {
