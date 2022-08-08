@@ -11,6 +11,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
     - [Stylesheet files](#stylesheet-files)
     - [Typescript](#typescript)
     - [Favicon](#favicon)
+    - [Inline SVG](#inline-svg)
     - [Source Maps](#source-maps)
     - [Validation](#validation)
   - [Production](#production)
@@ -97,6 +98,11 @@ If you put a `favicon.ico` file in the [src](src) directory, it will
 automatically be added to the `dist` folder and the HTML. You will need to stop
 and restart the dev server after adding the favicon, if it is running.
 
+#### Inline SVG
+
+SVG files will be automatically inlined to the bundle, unless they are too large
+in which case they will be loaded from disk as usual.
+
 #### Source Maps
 
 By default we generate inline source maps for Development mode and high-quality
@@ -144,6 +150,8 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - Typescript is integrated. You can use either TS or JS as required.
 - Adds favicon automatically if exists in the `src` folder.
 - Separate Sourcemap files are generated for Production.
+- Smaller SVG files will be inlined to the bundle instead of having separate
+  files.
 
 ## Planned functionality
 
