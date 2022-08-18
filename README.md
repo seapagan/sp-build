@@ -10,6 +10,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
   - [Specific Notes](#specific-notes)
     - [Stylesheet files](#stylesheet-files)
     - [Typescript](#typescript)
+    - [Environment Variables](#environment-variables)
     - [Favicon](#favicon)
     - [Inline SVG](#inline-svg)
     - [Source Maps](#source-maps)
@@ -26,7 +27,8 @@ HTML/CSS/JS projects though.
 
 - Clone the repo from GitHub. Remember to remove the `.git` directory inside and
 reinitialize with `git --init`.
-- Download the latest public release [here](https://github.com/seapagan/sp-build/releases/latest)
+- Download the latest public release
+  [here](https://github.com/seapagan/sp-build/releases/latest)
 - Download the latest tarball from the main branch
   [here](https://github.com/seapagan/sp-build/archive/main.tar.gz). This may
   contain breaking code.
@@ -89,8 +91,44 @@ file extensions
 
 By default the build system uses plain JavaScript. if you prefer to use
 TypeScript, simply rename the `index.js` to `index.ts`, stop and restart the dev
-server then code as normal.
-TypeScript and supporting libraries are already installed.
+server then code as normal. TypeScript and supporting libraries are already
+installed.
+
+#### Environment Variables
+
+If you have a `.env` file in your project root, the script will load environment
+varaibles from this and make them available using `process.env.MY_VARIABLE`.
+Variable are expanded if needed:
+
+.env:
+
+```ini
+# This is a comment
+MY_TEST_VARIABLE="This is a Test"
+EXPANDED_VARIABLE=${MY_TEST_VARIABLE} with expansion.
+```
+
+script.js:
+
+```javascript
+console.log(process.env.MY_TEST_VARIABLE)
+console.log(process.env.EXPANDED_VARIABLE)
+```
+
+output:
+
+  ```console
+  This is a Test
+  This is a Test with expansion.
+  ```
+
+If you are using a hosting provider that allows you to set ENV variables in
+their interface (eg Heroku, Vercel etc), the script will also pull up them - in
+this case dont include the `.env` file.
+
+NOTE: As with all systems using `dotenv`, the variables are injected into the
+script at **BUILD** time, **NOT** runtime! **Do not use this for any secret or
+secure variables as they will appear in the final bundle**.
 
 #### Favicon
 
@@ -143,8 +181,8 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - Development server that hot-reloads on all code changes
 - Create a standalone production build that can run in a browser.
 - Babel for Javascript files to transpile to backwards-compatible code.
-- JS and CSS are compressed and named with a Hash for each code change. The
-  HTML file is automatically updated with these.
+- JS and CSS are compressed and named with a Hash for each code change. The HTML
+  file is automatically updated with these.
 - ESLint(JS), StyleLint(CSS) and HTML-Validate (HTML) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
