@@ -95,7 +95,7 @@ module.exports = (_env, argv) => {
                 modules: {
                   auto: true,
                   localIdentName: devMode
-                    ? "[name]__[local]___[hash:base64:5]"
+                    ? "[path][name]__[local]"
                     : "[hash:base64]",
                 },
               },
