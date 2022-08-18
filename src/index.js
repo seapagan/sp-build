@@ -1,10 +1,10 @@
-// import the main CSS. This needs to be here
+// import the main CSS. This needs to be first, though you can replace with
+// your own filenames if required.
 import "./styles/site.css";
-import styles from "./styles/styles.module.scss";
-
 /* -------------------------------------------------------------------------- */
 /*                remove everything below for your own projects               */
 /* -------------------------------------------------------------------------- */
+import styles from "./styles/styles.module.scss";
 
 // prove that our JS file is loaded
 const msg =
