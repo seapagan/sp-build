@@ -186,6 +186,8 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - ESLint(JS), StyleLint(CSS) and HTML-Validate (HTML) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
+- Environment variables are read from a `.env` file if it exists and injected
+  into the bundle.
 - Adds favicon automatically if exists in the `src` folder.
 - Separate Sourcemap files are generated for Production.
 - Smaller SVG files will be inlined to the bundle instead of having separate
