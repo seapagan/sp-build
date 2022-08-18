@@ -190,6 +190,7 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - Babel for Javascript files to transpile to backwards-compatible code.
 - JS and CSS are compressed and named with a Hash for each code change. The HTML
   file is automatically updated with these.
+- CSS modules are enabled for CSS, SCSS and SASS files.
 - ESLint(JS), StyleLint(CSS) and HTML-Validate (HTML) are run automatically.
 - SCSS and SASS automatically detected and compiled on the fly.
 - Typescript is integrated. You can use either TS or JS as required.
@@ -202,7 +203,6 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 
 ## Planned functionality
 
-- Add PostCSS integration
 - Integrate `favicons-webpack-plugin` to auto generate favicons for different
   devices
 
