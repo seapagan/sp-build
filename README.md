@@ -9,6 +9,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
   - [Development](#development)
   - [Specific Notes](#specific-notes)
     - [Stylesheet files](#stylesheet-files)
+      - [CSS Modules](#css-modules)
     - [Typescript](#typescript)
     - [Environment Variables](#environment-variables)
     - [Favicon](#favicon)
@@ -76,7 +77,7 @@ The following notes are of interest.
 
 #### Stylesheet files
 
-your CSS files need to be imported in the JS file instead of the HTML. In a
+Your CSS files need to be imported in the JS file instead of the HTML. In a
 production bundle, these will be combined and extracted then minified. Import
 them at the top of your JS file, for example:
 
@@ -86,6 +87,12 @@ import "./styles/site.css";
 
 You can also use `SASS` or `SCSS` instead of plain CSS, simply by renaming the
 file extensions
+
+##### CSS Modules
+
+[CSS Modules](https://github.com/css-modules/css-modules) are enabled for
+CSS/SCSS and SASS. They should have the file name format of `<NAME>.module.css`
+(or SCSS etc), and are imported as above.
 
 #### Typescript
 

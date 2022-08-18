@@ -88,9 +88,30 @@ module.exports = (_env, argv) => {
           test: /\.(sa|sc|c)ss$/,
           use: [
             devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1,
+                modules: {
+                  auto: true,
+                  localIdentName: devMode
+                    ? "[path][name]__[local]"
+                    : "[hash:base64]",
+                },
+              },
+            },
+            "sass-loader",
+          ],
+          include: /\.module\.(sa|sc|c)ss$/,
+        },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            devMode ? "style-loader" : MiniCssExtractPlugin.loader,
             "css-loader",
             "sass-loader",
           ],
+          exclude: /\.module\.(sa|sc|c)ss$/,
         },
         {
           test: /\.js$/,
