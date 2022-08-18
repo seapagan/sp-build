@@ -8,6 +8,7 @@ const path = require("path");
 const fs = require("fs");
 
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlValidatePlugin = require("html-validate-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -29,7 +30,7 @@ const haveFavicon = () => {
   return fs.existsSync(favicon);
 };
 
-module.exports = (env, argv) => {
+module.exports = (_env, argv) => {
   const devMode = argv.mode !== "production";
 
   const config = {
@@ -47,6 +48,7 @@ module.exports = (env, argv) => {
       clean: true,
     },
     plugins: [
+      new Dotenv(),
       new HtmlWebpackPlugin({
         template: "src/index.html",
         favicon: haveFavicon() ? "src/favicon.ico" : "",
