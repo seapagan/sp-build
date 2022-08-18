@@ -48,7 +48,7 @@ module.exports = (_env, argv) => {
       clean: true,
     },
     plugins: [
-      new Dotenv({ systemvars: true }),
+      new Dotenv({ systemvars: true, expand: true }),
       new HtmlWebpackPlugin({
         template: "src/index.html",
         favicon: haveFavicon() ? "src/favicon.ico" : "",

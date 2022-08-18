@@ -97,20 +97,30 @@ installed.
 #### Environment Variables
 
 If you have a `.env` file in your project root, the script will load environment
-varaibles from this andmake them available using `process.env.MY_VARIABLE`.
+varaibles from this and make them available using `process.env.MY_VARIABLE`.
+Variable are expanded if needed:
 
 .env:
 
 ```ini
 # This is a comment
 MY_TEST_VARIABLE="This is a Test"
+EXPANDED_VARIABLE=${MY_TEST_VARIABLE} with expansion.
 ```
 
 script.js:
 
 ```javascript
 console.log(process.env.MY_TEST_VARIABLE)
+console.log(process.env.EXPANDED_VARIABLE)
 ```
+
+output:
+
+  ```console
+  This is a Test
+  This is a Test with expansion.
+  ```
 
 If you are using a hosting provider that allows you to set ENV variables in
 their interface (eg Heroku, Vercel etc), the script will also pull up them - in

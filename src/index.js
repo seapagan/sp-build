@@ -13,5 +13,6 @@ document.getElementById("js-test").innerText = msg;
 document.querySelector(".no-js").style.display = "none";
 
 // Testing that the .env file is read
-console.log(process.env.TEST_ENV_STRING);
-console.log(process.env.TEST_ENV_VAR);
+console.log(process.env.MY_TEST_VARIABLE);
+console.log(process.env.EXPANDED_VARIABLE);
+console.log(process.env.MY_OTHER_TEST);
