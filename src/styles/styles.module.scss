@@ -1,10 +1,16 @@
 .moduleTest {
+  text-align: center;
+  padding: 1em 2em;
   background-color: hsl(203, 100%, 50%);
   color: white;
-  width: 90%;
-  padding: 0.5em;
+  font-size: 1.2rem;
+  line-height: 1.5em;
   border-radius: 1em;
-  text-align: center;
-  margin: 1em auto;
   box-shadow: 0 10px 13px -7px #000;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    width: 95%;
+  }
 }
