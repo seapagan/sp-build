@@ -90,7 +90,15 @@ module.exports = (_env, argv) => {
             devMode ? "style-loader" : MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
-              options: { importLoaders: 1, modules: true },
+              options: {
+                importLoaders: 1,
+                modules: {
+                  auto: true,
+                  localIdentName: devMode
+                    ? "[name]__[local]___[hash:base64:5]"
+                    : "[hash:base64]",
+                },
+              },
             },
             "sass-loader",
           ],
