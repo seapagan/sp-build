@@ -1,4 +1,4 @@
-# SPBuild - Webpack build system for simple development <!-- omit in toc -->
+# Webpack build system for simple development <!-- omit in toc -->
 
 This is a setup for plain HTML/CSS/JS coding, when using a Library or Framework
 is too much. It gives a real-time update in development mode and optimized,
