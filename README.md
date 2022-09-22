@@ -208,5 +208,5 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 
 ## Bugs
 
-- ESLint does not understand Typescript in (at least) VSCode and gives errors.
-  This does not stop compilation though.
+- ESLint does not understand Typescript in (at least) VSCode and gives editor 
+  warnings / errors. This does not stop compilation though.
