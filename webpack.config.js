@@ -100,6 +100,15 @@ module.exports = (_env, argv) => {
                 },
               },
             },
+            {
+              loader: "postcss-loader",
+              options: {
+                sourceMap: true,
+                postcssOptions: {
+                  config: "postcss.config.js",
+                },
+              },
+            },
             "sass-loader",
           ],
           include: /\.module\.(sa|sc|c)ss$/,
@@ -109,6 +118,15 @@ module.exports = (_env, argv) => {
           use: [
             devMode ? "style-loader" : MiniCssExtractPlugin.loader,
             "css-loader",
+            {
+              loader: "postcss-loader",
+              options: {
+                sourceMap: true,
+                postcssOptions: {
+                  config: "postcss.config.js",
+                },
+              },
+            },
             "sass-loader",
           ],
           exclude: /\.module\.(sa|sc|c)ss$/,
