@@ -10,6 +10,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
   - [Specific Notes](#specific-notes)
     - [Stylesheet files](#stylesheet-files)
       - [CSS Modules](#css-modules)
+      - [Vendor Prefixes](#vendor-prefixes)
     - [Typescript](#typescript)
     - [Environment Variables](#environment-variables)
     - [Favicon](#favicon)
@@ -94,6 +95,12 @@ file extensions
 CSS/SCSS and SASS. They should have the file name format of `<NAME>.module.css`
 (or SCSS etc), and are imported as above.
 
+##### Vendor Prefixes
+
+All generated CSS will have the specific vendor-prefixes applied to suport
+compatibility with older browser versions. Applies in both standard and Module
+setups.
+
 #### Typescript
 
 By default the build system uses plain JavaScript. if you prefer to use
@@ -105,7 +112,7 @@ installed.
 
 If you have a `.env` file in your project root, the script will load environment
 varaibles from this and make them available using `process.env.MY_VARIABLE`.
-Variable are expanded if needed:
+Variables are expanded if needed:
 
 .env:
 
@@ -187,13 +194,21 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 
 - Development server that hot-reloads on all code changes
 - Create a standalone production build that can run in a browser.
-- Babel for Javascript files to transpile to backwards-compatible code.
+- [Babel](https://babeljs.io/) for Javascript files to transpile to
+  backwards-compatible code for older browsers.
 - JS and CSS are compressed and named with a Hash for each code change. The HTML
   file is automatically updated with these.
-- CSS modules are enabled for CSS, SCSS and SASS files.
-- ESLint(JS), StyleLint(CSS) and HTML-Validate (HTML) are run automatically.
-- SCSS and SASS automatically detected and compiled on the fly.
-- Typescript is integrated. You can use either TS or JS as required.
+- [CSS modules](https://github.com/css-modules/css-modules) are enabled for CSS,
+  SCSS and SASS files.
+- Generated CSS has vendor prefixes applied using
+  [AutoPrefizer](https://www.npmjs.com/package/autoprefixer)
+- [ESLint](https://eslint.org/) (JS), [StyleLint](https://stylelint.io/) (CSS)
+  and [HTML-Validate](https://gitlab.com/html-validate/html-validate) (HTML) are
+  run automatically.
+- [SCSS or SASS](https://sass-lang.com/) is automatically detected and compiled
+  on the fly.
+- [Typescript](https://www.typescriptlang.org/) is integrated. You can use
+  either TS or JS as required.
 - Environment variables are read from a `.env` file if it exists and injected
   into the bundle.
 - Adds favicon automatically if exists in the `src` folder.
@@ -205,8 +220,11 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 
 - Integrate `favicons-webpack-plugin` to auto generate favicons for different
   devices
+- Look at possible integration of
+  [postcss-normalize](https://github.com/csstools/postcss-normalize) since we
+  now have postcss enabled.
 
 ## Bugs
 
-- ESLint does not understand Typescript in (at least) VSCode and gives editor 
+- ESLint does not understand Typescript in (at least) VSCode and gives editor
   warnings / errors. This does not stop compilation though.
