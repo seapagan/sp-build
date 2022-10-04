@@ -27,6 +27,14 @@ HTML/CSS/JS projects though.
 
 ## How to get
 
+- **Easiest Way**: Goto the repository page for this project in GitHub and press
+  the `Use this Template` button. This will create a new repository in your own
+  account with a clean Git history. Clone this to your local development
+  machine and start working. You could even fire up a GitHub codespace and start
+  working straight away!
+
+Other options are:
+
 - Clone the repo from GitHub. Remember to remove the `.git` directory inside and
 reinitialize with `git --init`.
 - Download the latest public release
