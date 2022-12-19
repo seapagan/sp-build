@@ -3179,10 +3179,10 @@ html-validate-webpack-plugin@^1.2.1:
   dependencies:
     schema-utils "^1.0.0"
 
-html-validate@^7.10.0:
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/html-validate/-/html-validate-7.10.0.tgz#45953bc9abf84a3a91f76a820ebb98c2cebcc578"
-  integrity sha512-u+g03pnu3s/LaJP/O8T42v+zlgACtL4T0u9DHQLkNTd9LyzUEjir+YqDSGuKX+QsVld8ORDK/ZQ/8FQGLx1/Vw==
+html-validate@^7.11.0:
+  version "7.11.0"
+  resolved "https://registry.yarnpkg.com/html-validate/-/html-validate-7.11.0.tgz#ce1445f8123e4a40b962d2bb690f85a3a6e85bf1"
+  integrity sha512-kJJVMYVS/xhB+eVFH43LqTsgpl6kI/Zy6qanROqF9FizaTyBbb7UkVNrux6inbCNNV1ONZtPbdQL+X2Ol1+ZZA==
   dependencies:
     "@babel/code-frame" "^7.10.0"
     "@html-validate/stylish" "^3.0.0"
