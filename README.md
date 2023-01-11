@@ -208,8 +208,14 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
   file is automatically updated with these.
 - [CSS modules](https://github.com/css-modules/css-modules) are enabled for CSS,
   SCSS and SASS files.
+- [PostCSS](https://github.com/postcss/postcss) is enabled, allowing the use of
+  their many plugins. Simply install and then add them to the
+  `postcss.config.js` file in the root.
+- [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
+  is included to enable the use of experimental CSS fetaures or those currently
+  with limited browser support.
 - Generated CSS has vendor prefixes applied using
-  [AutoPrefizer](https://www.npmjs.com/package/autoprefixer)
+  [AutoPrefixer](https://www.npmjs.com/package/autoprefixer)
 - [ESLint](https://eslint.org/) (JS), [StyleLint](https://stylelint.io/) (CSS)
   and [HTML-Validate](https://gitlab.com/html-validate/html-validate) (HTML) are
   run automatically.
@@ -231,6 +237,10 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
 - Look at possible integration of
   [postcss-normalize](https://github.com/csstools/postcss-normalize) since we
   now have postcss enabled.
+- possibly install [postcss-nested](https://github.com/postcss/postcss-nested)
+  to allow nesting like SCSS in plain CSS (it already allows nesting in CSS to
+  the proposed [CSS Nesting Specification](https://drafts.csswg.org/css-nesting-1/))
+  using  `postcss-present-env`
 
 ## Bugs
 
