@@ -143,7 +143,7 @@ module.exports = (_env, argv) => {
           },
         },
         {
-          test: /\.tsx?$/,
+          test: /\.ts?$/,
           exclude: /node_modules/,
           use: {
             loader: "ts-loader",
