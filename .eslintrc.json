@@ -15,6 +15,15 @@
   },
   "ignorePatterns": ["dist/*"],
   "plugins": ["simple-import-sort", "import", "sonarjs"],
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/dom"]
+    }
+  ],
   "rules": {
     "sonarjs/cognitive-complexity": 1,
     "import/no-duplicates": "error",
