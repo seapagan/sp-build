@@ -14,10 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 main {
