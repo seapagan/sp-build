@@ -83,6 +83,8 @@ module.exports = (_env, argv) => {
       watchFiles: ["./src/*"],
       hot: true,
     },
+    stats: "minimal",
+
     module: {
       rules: [
         {
