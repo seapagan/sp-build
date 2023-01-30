@@ -11,4 +11,6 @@ module.exports = {
 
   collectCoverage: true,
   coverageReporters: ["json", "html", "lcov"],
+  setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.js"],
+  testEnvironment: "jest-environment-jsdom",
 };
