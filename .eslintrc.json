@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
   "root": true,
   "extends": ["eslint:recommended", "plugin:sonarjs/recommended", "prettier"],
@@ -22,7 +23,8 @@
         "**/tests/**/*.[jt]s?(x)",
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
-      "extends": ["plugin:testing-library/dom"]
+      "extends": ["plugin:jest/recommended", "plugin:testing-library/dom"],
+      "plugins": ["jest"]
     }
   ],
   "rules": {
