@@ -19,6 +19,7 @@
     {
       "files": [
         "**/__tests__/**/*.[jt]s?(x)",
+        "**/tests/**/*.[jt]s?(x)",
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
       "extends": ["plugin:testing-library/dom"]
