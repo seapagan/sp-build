@@ -7,7 +7,7 @@
     "build": "webpack build",
     "prod": "webpack build --mode=production",
     "dev": "webpack serve",
-    "test": "jest --watch"
+    "test": "jest --watch --coverage"
   },
   "dependencies": {},
   "devDependencies": {

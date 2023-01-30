@@ -8,4 +8,7 @@ module.exports = {
     // "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
     "\\.(sa|sc|c)ss$": "identity-obj-proxy",
   },
+
+  collectCoverage: true,
+  coverageReporters: ["json", "html", "lcov"],
 };
