@@ -10,7 +10,8 @@ module.exports = {
   },
 
   collectCoverage: true,
-  coverageReporters: ["json", "html", "lcov"],
+  collectCoverageFrom: ["src/**/*.[tj]s(x)?"],
+  coverageReporters: ["json", "html", "lcov", "text"],
   setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.js"],
   testEnvironment: "jest-environment-jsdom",
 };
