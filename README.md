@@ -1,5 +1,10 @@
 # Webpack build system for simple development <!-- omit in toc -->
 
+[![Tests](https://github.com/seapagan/sp-build/actions/workflows/node.js.yml/badge.svg)](https://github.com/seapagan/sp-build/actions/workflows/node.js.yml)
+[![CodeQL](https://github.com/seapagan/sp-build/actions/workflows/codeql.yml/badge.svg)](https://github.com/seapagan/sp-build/actions/workflows/codeql.yml)
+[![Dependency
+Review](https://github.com/seapagan/sp-build/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/seapagan/sp-build/actions/workflows/dependency-review.yml)
+
 This is a setup for plain HTML/CSS/JS coding, when using a Library or Framework
 is too much. It gives a real-time update in development mode and optimized,
 minimized code for production. JS/TS, CSS/SCSS/SASS ready.
