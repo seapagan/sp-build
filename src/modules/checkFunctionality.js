@@ -4,7 +4,7 @@ export const changeText = () => {
   const msg =
     "If both these boxes have white text and blue background, then the " +
     "JavaScript, CSS/SCSS and CSS modules are working properly.";
-  document.getElementById("js-test").innerText = msg;
+  document.getElementById("js-test").innerHTML = msg;
   document.getElementById("js-test").classList.add(`${styles.moduleTest}`);
 };
 

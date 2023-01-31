@@ -1,18 +1,31 @@
-beforeEach(() => {
-  // set up the dom so the test has something to access
-  document.body.innerHTML = `
-    <p data-testid="js-test" id='js-test'></p>
-  `;
-});
+import { screen } from "@testing-library/dom";
+
+import fs from "fs";
+import path from "path";
+
+import { changeText, logEnv } from "./modules/checkFunctionality";
+
+const htmlDocPath = path.join(process.cwd(), "src", "index.html");
+const htmlDocContent = fs.readFileSync(htmlDocPath).toString();
+
+document.body.innerHTML = htmlDocContent;
 
 test("This test file is run properly", () => {
   expect(true).toBeTruthy();
 });
 
 test("it should output to the console 3 times", () => {
-  const consoleSpy = jest.spyOn(console, "log").mockImplementation(() => {});
+  const oldConsoleLog = console.log;
+  console.log = jest.fn();
 
-  require("./index.js");
+  logEnv();
 
-  expect(consoleSpy).toHaveBeenCalledTimes(3);
+  expect(console.log).toHaveBeenCalledTimes(3);
+  console.log = oldConsoleLog;
+});
+
+test("it should dynamically change the test text", () => {
+  changeText();
+
+  expect(screen.getByText(/working properly/i)).toBeInTheDocument();
 });
