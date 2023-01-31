@@ -7,8 +7,9 @@
     "stylelint-config-css-modules"
   ],
   "ignoreFiles": [
-    "dist/*",
-    "node_modules/**"
+    "dist/**",
+    "node_modules/**",
+    "coverage/**"
   ],
   "rules": {
     "hue-degree-notation": "number",
