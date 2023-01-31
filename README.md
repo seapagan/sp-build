@@ -236,7 +236,7 @@ folder can be served from any standard web server or GH-Pages / Netlify etc.
   their many plugins. Simply install and then add them to the
   `postcss.config.js` file in the root.
 - [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
-  is included to enable the use of experimental CSS fetaures or those currently
+  is included to enable the use of experimental CSS features or those currently
   with limited browser support.
 - Generated CSS has vendor prefixes applied using
   [AutoPrefixer](https://www.npmjs.com/package/autoprefixer)
