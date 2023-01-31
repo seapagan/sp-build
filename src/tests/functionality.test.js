@@ -3,7 +3,7 @@ import { screen } from "@testing-library/dom";
 import fs from "fs";
 import path from "path";
 
-import { changeText, logEnv } from "./modules/checkFunctionality";
+import { changeText, logEnv } from "../modules/checkFunctionality";
 
 const htmlDocPath = path.join(process.cwd(), "src", "index.html");
 const htmlDocContent = fs.readFileSync(htmlDocPath).toString();
