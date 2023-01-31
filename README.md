@@ -17,6 +17,7 @@ minimized code for production. JS/TS, CSS/SCSS/SASS ready.
     - [Inline SVG](#inline-svg)
     - [Source Maps](#source-maps)
     - [Validation](#validation)
+  - [Testing](#testing)
   - [Production](#production)
 - [Implemented functionality](#implemented-functionality)
 - [Planned functionality](#planned-functionality)
@@ -178,6 +179,29 @@ insecure regardless!!**
 This is run automatically on HTML files (using `html-validate`), JavaScript
 files (using `ESLint`) and CSS/SCSS/SASS files using `StyleLint`, **The build
 process or dev-server will fail if there are any validation errors!**.
+
+### Testing
+
+[Jest](https://jestjs.io/) testing is integrated to the build system. To run the
+test watcher type:
+
+```bash
+npm run test
+```
+
+or
+
+```bash
+yarn test
+```
+
+There is an example test file [index.test.js](src/index.test.js) which you can
+look at and replace with your own code.
+
+**Note that at this time testing Typescript is not configured.**
+
+In addition, [Testing Library](https://testing-library.com/) is installed and configured,
+both for `dom` and `jest-dom`
 
 ### Production
 
