@@ -14,4 +14,12 @@ module.exports = {
   coverageReporters: ["json", "html", "lcov", "text"],
   setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.js"],
   testEnvironment: "jest-environment-jsdom",
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
 };
