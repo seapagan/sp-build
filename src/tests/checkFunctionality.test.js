@@ -10,10 +10,6 @@ const htmlDocContent = fs.readFileSync(htmlDocPath).toString();
 
 document.body.innerHTML = htmlDocContent;
 
-test("This test file is run properly", () => {
-  expect(true).toBeTruthy();
-});
-
 test("it should output to the console 3 times", () => {
   const oldConsoleLog = console.log;
   console.log = jest.fn();
