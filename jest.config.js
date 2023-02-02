@@ -1,5 +1,6 @@
 module.exports = {
   moduleFileExtensions: ["tsx", "ts", "js", "jsx"],
+  testMatch: ["**/tests/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
   // moduleDirectories:[],
   moduleNameMapper: {
     // eslint-disable-next-line
@@ -10,7 +11,7 @@ module.exports = {
   },
 
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.[tj]s(x)?"],
+  collectCoverageFrom: ["src/**/*.[tj]s?(x)"],
   coverageReporters: ["json", "html", "lcov", "text"],
   setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.js"],
   testEnvironment: "jest-environment-jsdom",
