@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "^5.57.1",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^4.2.2",
+    "css-minimizer-webpack-plugin": "^5.0.0",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
