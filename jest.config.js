@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   moduleFileExtensions: ["tsx", "ts", "js", "jsx"],
   testMatch: ["**/tests/**/*.test.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
   // moduleDirectories:[],
