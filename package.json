@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "homepage": "https://www.gnramsay.com/",
+  "type": "module",
   "scripts": {
     "build": "webpack build",
     "prod": "webpack build --mode=production",
